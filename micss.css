@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sonidos{
+	background-image:url(\'animales/gallina.png\'); 
+	background-size:cover;
+	background-repeat: no-repeat; 
+	width:260px; 
+	height: 250px;
+	cursor:pointer;
+}
+
+.contenedor {
+	position: relative;
+	width: 400px; /* Ajusta el ancho según tus necesidades*/
+}
+
+.contenedor img {
+	display: block;
+	width: 100%;
+  height: 300px
+  
+}
+
+.color-div {
+		width: 16px;
+		height: 16px;
+		margin: 2px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+.contenedor .texto-superpuesto {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	text-align: center;
+	z-index: 1;
+	font-family: "mia";	
+	font-weight:bold;
+	font-style: normal;		
+	color: white;
+	text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;	
+	padding: 10px;
+	cursor:pointer;
+}
+li{
+	cursor:pointer;
+}
+li:hover{
+	background-color:blanchedalmond;
+}
+
+
+h3{
+	color: black;
+	background-color: aliceblue;
+}
+img{
+  cursor: pointer;
+  opacity: 1;
+	border: solid;
+	border-width: 10px;
+  border-color:#22aafe;
+	border-radius: 6px
+}
+
+img:hover{
+  opacity: 1;
+	border-width: 10px;
+  border-color:white;
+	border-radius: 6px
+}
+
+ body {
+	 background-image: url("../imagenes/fondom.jpg");
+	 background-size:cover;
+	 background-repeat:repeat-y;
+	 background-position: center center;    
+	 background-color: #22aafe;
+	 height: 100vh;
+	 margin:0;
+	 
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+
+.estilotexto {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 15px;
+  border: none;
+  font: normal 40px/1 "Fredoka One", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 3px 3px 0 #0199d9 , 4px 4px 0 #0199d9 , 5px 5px 0 #0199d9 , 6px 6px 0 #0199d9 , 7px 7px 0 #0199d9 , 8px 8px 0 #0199d9 , 9px 9px 0 #0199d9 , 10px 10px 0 #0199d9 , 11px 11px 0 #0199d9 , 12px 12px 0 #0199d9 , 13px 13px 0 #0199d9 , 14px 14px 0 #0199d9 , 15px 15px 0 #0199d9 , 16px 16px 0 #0199d9 , 17px 17px 0 #0199d9 , 18px 18px 0 #0199d9 , 19px 19px 0 #0199d9 , 20px 20px 0 #0199d9 ;
+}
+
+.pintacirculo{
+	border:solid;
+	border-radius: 50px;
+	font-size:50px;
+  background-color: white;
+  color: black;
+}

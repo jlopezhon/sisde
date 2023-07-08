@@ -75,7 +75,7 @@ img:hover{
 }
 
  body {
-	 background-image: url("fondom.jpg");
+	 background-image: url("https://cdn.jsdelivr.net/gh/jlopezhon/sisdehon/fondom.jpg");
 	 background-size:cover;
 	 background-repeat:repeat-y;
 	 background-position: center center;    

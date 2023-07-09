@@ -55,6 +55,11 @@ function reproducirAudio(valor) {
 	}
 }
 
+function reiniciodatos(){
+	$("input").val("");
+	
+}
+
 
 /*var colorlinea='black';
 

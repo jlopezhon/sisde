@@ -56,7 +56,8 @@ function reproducirAudio(valor) {
 }
 
 function reiniciodatos(){
-  $("input").val("");
+  	$("input").val("");
+	$('input').css('background-color', 'white');
 }
 
 

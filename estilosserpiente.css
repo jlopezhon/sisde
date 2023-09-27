@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.estilocelda1{
+	height: 50px;
+	width: 50px;
+	border:solid;
+	border-width: 1px;                
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;        
+}
+.estilocelda2{
+	height: 50px;
+	width: 50px;
+	border:solid;
+	border-width: 1px;        
+
+}
+.estilocelda3{
+	height: 50px;
+	width: 50px;
+	border:solid;
+	border-width: 1px;        
+
+}
+.estilocelda4{
+	height: 50px;
+	width: 50px;
+	border:solid;
+	border-width: 1px;        
+
+}
+.estilocelda5{
+	height:50px;
+	width: 50px;
+	border:solid;
+	border-width: 1px;                
+}
+.circle {
+	width: 50px;
+	height:50px;
+
+	border-radius: 50%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	position: relative; 
+	top: 550px;
+	left: 50px;
+	transform: translate(-50%, -50%);
+	transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+.circlem {
+	width: 50px;
+	height: 50px;
+
+	border-radius: 50%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	position: relative; 
+	top: 550px;
+	left: 0px;
+	transform: translate(-50%, -50%);
+	transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+#dice-container {
+	display: inline-block;
+}
+
+#dice-container2 {
+	display: inline-block;
+}
+
+#dice {
+	width: 100px;
+	height: 100px;
+	transition: transform 0.5s ease-in-out;
+}
+#dice2 {
+	width: 100px;
+	height: 100px;
+	transition: transform 0.5s ease-in-out;
+}
+
+ .selec{
+        cursor:pointer;
+      }
+      .selec:hover{
+        border:solid;
+        border-color: aqua;
+      }

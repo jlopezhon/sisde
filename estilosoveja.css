@@ -1,0 +1,44 @@
+.cuadroboton{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 500px;		
+	/*d-flex flex-wrap justify-content-center align-items-center*/
+}
+
+.botoninicio{
+	display: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+button{
+
+}
+
+.botones{
+  width: 250px;
+  height: 150px;
+  color: white;
+  opacity: 75%;
+  border:solid;
+  border-color: red;
+	font-size: 20px;
+}
+
+button:hover{
+  opacity: 100%;
+  font-weight: bolder;
+	font-size: 20px;
+}
+
+#cronometro {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}

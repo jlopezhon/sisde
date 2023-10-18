@@ -1,0 +1,18 @@
+img{
+	cursor:pointer;
+	border-radius: 30px;
+	width: 100%;
+}
+
+.carta{
+	border-width: 5px;
+  height: 280px;
+}
+
+.carta:hover{
+	border: solid;
+	border-color: #F9F3CC;
+	border-width: 5px;
+	border-radius: 30px;
+}
+

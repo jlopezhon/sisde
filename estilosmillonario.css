@@ -1,0 +1,77 @@
+.bajo{
+	font-size: 15px;
+}
+
+.segundero{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+}
+
+.cuadro {
+  background-color: #021132;
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 22px;
+  text-align: center;
+	width: 1000px;
+	height: 100px;
+}
+
+.cuadro2 {
+  background-color: #021132;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 22px;
+  text-align: center;
+	width: 1000px;
+	height: 100px;
+}
+
+.botones:hover{
+  font-weight: bolder;
+  
+  width: 100%;
+}
+
+.ptj{
+  font-size: 90px;
+  font-weight: bolder;
+  color:#FFD700;
+  background-color:#021132; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  align-items: center;
+  border-radius: 25px;  
+	flex-wrap: wrap;	
+}
+
+.ptj2{
+  font-size: 50px;
+  font-weight: bolder;
+  color:#FFD700;
+  background-color:#021132; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  align-items: center;
+  border-radius: 100px; 
+  width: 600px;
+  
+}
+
+.acumulado{
+  width: 50px;
+  color:#FFD700;
+  border-color: white;
+  border:solid;
+  border-width: 1px;
+  text-align: center;
+  font-size: 8px;
+}

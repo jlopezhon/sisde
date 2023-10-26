@@ -27,8 +27,7 @@ function actualizarCronometro() {
   const displayHoras = horas < 10 ? '0' + horas : horas;
   const displayMinutos = minutos < 10 ? '0' + minutos : minutos;
   const displaySegundos = segundos < 10 ? '0' + segundos : segundos;
-
-  //$('#cronometro').text(displayHoras + ':' + displayMinutos + ':' + displaySegundos);
+  
   $('#cronometro').text(displayHoras + ':' + displayMinutos + ':' + displaySegundos);
 }
 
@@ -152,7 +151,6 @@ function colocarpalabra(){
     $("#p"+mov).html("");
     $("#p"+mov).show("slow");
   }
-  
   
 }
 

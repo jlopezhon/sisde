@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 .estilocelda1{
 	height: 50px;
 	width: 50px;
@@ -92,9 +90,10 @@
 }
 
  .selec{
-        cursor:pointer;
-      }
-      .selec:hover{
-        border:solid;
-        border-color: aqua;
-      }
+		cursor:pointer;
+	}
+
+	.selec:hover{
+		border:solid;
+		border-color: aqua;
+	}

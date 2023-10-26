@@ -1,4 +1,3 @@
-// JavaScript Document
 let porcentaje = 50;
 let porcentajesup = 550;
 let posl=550;
@@ -91,8 +90,7 @@ function validar(respuesta){
 
 function changePosition(aleatorio) {				
 
-	posicion+=aleatorio;
-	//posicion+=5;
+	posicion+=aleatorio;	
 
 	posicionesl=["","50","150","250","350","450","550","550","450","350","250","150","50","50","150","250","350","450","550","50","150","250","350","450","550","50","150","250","350","450","550","50","150","250","350","450","550","550","550","550"];
 	posicionest=["","550","550","550","550","550","550","450","450","450","450","450","450","350","350","350","350","350","350","250","250","250","250","250","250","150","150","150","150","150","150","50","50","50","50","50","50","50","50","50"];
@@ -119,7 +117,7 @@ function changePosition(aleatorio) {
 			setTimeout(rollDice2(),2000);
 		}					
 	}
-	//ganador
+	
 	if(posicion>35){
 		setTimeout("circle = document.getElementById('ficha');  circle.style.top = '50px';circle.style.left = '550px';",500);   
 		posicion=36;
@@ -129,8 +127,7 @@ function changePosition(aleatorio) {
 }
 
 function changePosition2(aleatorio) {  
-	posicion2+=aleatorio;
-	//posicion2+=14;
+	posicion2+=aleatorio;	
 
 	posicionesl=["","50","120","220","320","420","520","520","420","320","220","120","0","20","120","220","320","420","520","0","120","220","320","420","520","0","120","220","320","420","520","0","120","220","320","420","520","520","550","550"];
 	posicionest=["","550","550","550","550","550","550","450","450","450","450","450","450","350","350","350","350","350","350","250","250","250","250","250","250","150","150","150","150","150","150","50","50","50","50","50","50","50","50","50"];
@@ -138,9 +135,7 @@ function changePosition2(aleatorio) {
 	const circle2 = document.getElementById('ficha2');        
 	circle2.style.left = posicionesl[posicion2] + 'px';
 	circle2.style.top =  posicionest[posicion2] + 'px';
-
-	//escaleras
-	//console.log(posicion2)
+	
  if(posicion2==6){
 		setTimeout("circle = document.getElementById('ficha2');  circle.style.top = '350px';circle.style.left = '520px';",500);
 
@@ -157,8 +152,6 @@ function changePosition2(aleatorio) {
 
 		posicion2=27;
 	}		
-
-	//serpientes
 
 	if(posicion2==11){
 		setTimeout("circle = document.getElementById('ficha2');  circle.style.top = '550px';circle.style.left = '220px';",500);
@@ -180,9 +173,7 @@ function changePosition2(aleatorio) {
 
 		posicion2=28;
 	}
-
-
-	//ganador
+	
 	if(posicion2>35){
 		setTimeout("circle = document.getElementById('ficha2');  circle.style.top = '50px';circle.style.left = '500px';",500);   
 		posicion2=36;
@@ -221,10 +212,9 @@ const diceImages2 = [
 function rollDice() {
 	$("#turno").html("Turno del Computador");  
 
-	// Generate a random number between 1 and 6
 	const randomNum = Math.floor(Math.random() * 6) + 1;
 
-	// Change the dice image and add a spinning effect
+	
 	diceElement.style.transform = 'rotate(360deg)';
 	setTimeout(() => {
 		diceElement.src = diceImages[randomNum - 1];
@@ -239,10 +229,9 @@ function rollDice() {
 function rollDice2() {  
   setTimeout(()=>{    
     $("#turno").html("Turno del Jugador");
-    // Generate a random number between 1 and 6
+    
     const randomNum = Math.floor(Math.random() * 6) + 1;
-
-    // Change the dice image and add a spinning effect
+    
     diceElement2.style.transform = 'rotate(360deg)';
     setTimeout(() => {
       $('#dados')[0].play();

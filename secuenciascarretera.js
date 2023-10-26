@@ -11,9 +11,7 @@ var posobs=[6,8,12,16,21,23,24,29,31,34,37,41,45,49];
 
 var oimg=[0,0,0,0,0,0,"corruptos.png",0,"puente.png",0,0,0,"cactus.png",0,0,0,"llorando.png",0,0,0,0,"cactus.png",0,"maleante.png","pobreza.png",0,0,0,0,"rio.png",0,"enferma.png",0,0,"puente.png",0,0,"pobreza.png",0,0,0,"maleante.png",0,0,0,"llorando.png",0,0,0,"enferma.png",0,2];
 
-
 var odesc=[0,0,0,0,0,0,"En tu camino encontraras muchas personas corruptas, debes tener mucho cuidado con ellas",0,"En tu camino has encontrado muchos Puentes en mal estado",0,0,0,"El clima caliente puede ser un factor desfavorable al momento de migrar de tu pais",0,0,0,"Puedes encontrar muchas dificultades en el camino que te haran llorar",0,0,0,0,"El clima arido puede ser un factor desfavorable al momento de migrar de tu pais",0,"Los traficantes de personas estan al acecho, asi que debes ser cuidadoso","La falta de recursos economicos puede dificultar el camino del migrante",0,0,0,0,"En tu camino encontraras muchos rios que evitaran tu paso",0,"Puedes contagiarte de muchas enfermedades en tu camino, por lo que debes tener cuidado",0,0,"En tu camino encontraras muchos puentes en mal estado",0,0,"La falta de recursos economicos puede dificultar el camino del migrante",0,0,0,"Los traficantes de personas estan al acecho, asi que debes ser cuidadoso",0,0,0,"Puedes encontrar muchas dificultades en el camino que te haran llorar",0,0,0,"Puedes contagiarte de muchas enfermedades en tu camino, por lo que debes tener cuidado",0,2];
-
 
 var mensajes=[];
 
@@ -59,31 +57,24 @@ function rollDice() {
 	
 	diceElement.style.transform = 'rotate(360deg)';
 	setTimeout(() => {
-    //$('#dados')[0].play();
 		diceElement.src = diceImages[randomNum - 1];
 		diceElement.style.transform = 'rotate(0deg)';
-
-		//changePosition(randomNum);
 	}, 500);
   
   valordado=randomNum;
-
 }
 
 function rollDice2() {	
 	const randomNum = Math.floor(Math.random() * 6) + 1;
 	
 	diceElement2.style.transform = 'rotate(360deg)';
-	setTimeout(() => {
-    //$('#dados')[0].play();
+	setTimeout(() => {    
 		diceElement2.src = diceImages2[randomNum - 1];
 		diceElement2.style.transform = 'rotate(0deg)';
-
-		//changePosition(randomNum);
+		
 	}, 500);
   
   valordadopc=randomNum;
-
 }
 
 function movimiento(){
@@ -118,31 +109,22 @@ function movilidad(){
           $("#pregunta").modal("show");
         },1200);
       }
-      else{ //Sin obstaculo
+      else{
         setTimeout(moverfichapc,1000);
       }
     }
     else{      
       //setTimeout(moverfichapc,1000);
       $("#ganador").modal("show");
-      clearInterval(movid);
-      
-      /*  $('#jugador').animate({
-          'left':'715px',  
-          'top': '528px'    
-        },800);*/      
-      
+      clearInterval(movid);      
     }
-  }
-  
+  }  
   tiradasant++;
 }
 
 function mover(){  
   tiradasant=tiradas+1;
-  tiradas=tiradas+valordado;
-  //tiradas=posobs[indice];  
-  //tiradas=tiradas+49;  
+  tiradas=tiradas+valordado;  
   $("#fondoaudio")[0].pause();	
   $("#acarro")[0].play();
   
@@ -158,12 +140,8 @@ function mover(){
     setTimeout(function(){$("#ganador").modal("show");},1000);
     
     clearInterval(movid);
-  }
+  }  
   
-  //posx=posicionesx[tiradas]-20;
-  //posy=posicionesy[tiradas]-20;
-  
-  /*posx1=posicionesx[1]-20;
   posy1=posicionesy[1]-20;  
   posx2=posicionesx[2]-20;
   posy2=posicionesy[2]-20;  
@@ -181,60 +159,17 @@ function mover(){
   div.animate({
     left: posy1+'px',
     top: posx1+'px'
-  }, 1000, function() {
-    // Callback para la segunda animación
+  }, 1000, function() {   
     div.animate({
       left: posy2+'px',
       top: posx2+'px'
-    }, 1000, function() {
-      // Callback para la tercera animación
+    }, 1000, function() {   
       div.animate({
         left: posy3+'px',
         top: posx3+'px'
       }, 1000);
     });
-  });*/
-  
-  
-
-  /*for(mov=tiradasant;mov<=tiradas;mov++){
-    console.log(posicionesx[mov]-20+" - "+posicionesy[mov]);
-    posx=posicionesx[mov]-20;
-    posy=posicionesy[mov]-20;
-    
-    $('#jugador').animate({
-      'left': posy+'px',  
-      'top': posx+'px'    
-    });
-    
-    /*$('#jugador').animate({
-      'left': posy+'px',  
-      'top': posx+'px'    
-    }, 1000);
-    
-  }*/
-  
-  
-  /*$('#jugador').animate({
-    'left': posy+'px',  
-    'top': posx+'px'    
-  }, 1000);  */
-  
-  /*if(tiradas<51){
-    if(obstaculos[tiradas]==1){
-      setTimeout(function(){
-        $("#imagenrel").prop("src","multimedia/"+oimg[tiradas]);
-        $("#dobstaculo").html(odesc[tiradas]);
-        $("#pregunta").modal("show");
-      },1200);
-    }
-    else{
-      setTimeout(moverfichapc(),2600);
-    }
-  }
-  else{
-    $("#ganador").modal("show");
-  }*/
+  }); 
 }
 
 function seleccion(parametro){
@@ -310,8 +245,7 @@ function moverfichapc(){
   rollDice2();
   
   tiradas2=tiradas2+valordadopc;  
-  //tiradas2=tiradas2+49;  
-  
+	
   if(tiradas2<51){
     posxpc=posicionesx[tiradas2]-20;
     posypc=posicionesy[tiradas2]-20;
@@ -329,8 +263,6 @@ function moverfichapc(){
     
     setTimeout(function(){$("#nointentos").modal("show")},1500);
   }
-  
-  
 }
 
 function inicio(){
@@ -338,7 +270,6 @@ function inicio(){
   posiciones=generarNumerosAleatorios();  
   
 	$("#modalinicio").modal("hide");      
-  $("#preguntado").html(preguntas[posiciones[valoractual]]);
-	$("#fondoaudio")[0].play();	
-  
+  	$("#preguntado").html(preguntas[posiciones[valoractual]]);
+	$("#fondoaudio")[0].play();	  
 }

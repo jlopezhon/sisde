@@ -100,7 +100,7 @@ function movilidad(){
     $("#acarro")[0].pause();	
     
     if(tiradas<51){
-      if(obstaculos[tiradas]==1){ //Con Obstaculo
+      if(obstaculos[tiradas]==1){
         setTimeout(function(){
           $("#imagenrel").prop("src","multimedia/"+oimg[tiradas]);
           $("#imagenrel").prop("height",220);
@@ -113,8 +113,7 @@ function movilidad(){
         setTimeout(moverfichapc,1000);
       }
     }
-    else{      
-      //setTimeout(moverfichapc,1000);
+    else{            
       $("#ganador").modal("show");
       clearInterval(movid);      
     }

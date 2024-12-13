@@ -11,7 +11,9 @@ var posobs=[6,8,12,16,21,23,24,29,31,34,37,41,45,49];
 
 var oimg=[0,0,0,0,0,0,"corruptos.png",0,"puente.png",0,0,0,"cactus.png",0,0,0,"llorando.png",0,0,0,0,"cactus.png",0,"maleante.png","pobreza.png",0,0,0,0,"rio.png",0,"enferma.png",0,0,"puente.png",0,0,"pobreza.png",0,0,0,"maleante.png",0,0,0,"llorando.png",0,0,0,"enferma.png",0,2];
 
+
 var odesc=[0,0,0,0,0,0,"En tu camino encontraras muchas personas corruptas, debes tener mucho cuidado con ellas",0,"En tu camino has encontrado muchos Puentes en mal estado",0,0,0,"El clima caliente puede ser un factor desfavorable al momento de migrar de tu pais",0,0,0,"Puedes encontrar muchas dificultades en el camino que te haran llorar",0,0,0,0,"El clima arido puede ser un factor desfavorable al momento de migrar de tu pais",0,"Los traficantes de personas estan al acecho, asi que debes ser cuidadoso","La falta de recursos economicos puede dificultar el camino del migrante",0,0,0,0,"En tu camino encontraras muchos rios que evitaran tu paso",0,"Puedes contagiarte de muchas enfermedades en tu camino, por lo que debes tener cuidado",0,0,"En tu camino encontraras muchos puentes en mal estado",0,0,"La falta de recursos economicos puede dificultar el camino del migrante",0,0,0,"Los traficantes de personas estan al acecho, asi que debes ser cuidadoso",0,0,0,"Puedes encontrar muchas dificultades en el camino que te haran llorar",0,0,0,"Puedes contagiarte de muchas enfermedades en tu camino, por lo que debes tener cuidado",0,2];
+
 
 var mensajes=[];
 
@@ -56,25 +58,30 @@ function rollDice() {
 	const randomNum = Math.floor(Math.random() * 6) + 1;
 	
 	diceElement.style.transform = 'rotate(360deg)';
-	setTimeout(() => {
+	setTimeout(() => {    
 		diceElement.src = diceImages[randomNum - 1];
 		diceElement.style.transform = 'rotate(0deg)';
+		
 	}, 500);
   
   valordado=randomNum;
+
 }
 
 function rollDice2() {	
 	const randomNum = Math.floor(Math.random() * 6) + 1;
 	
 	diceElement2.style.transform = 'rotate(360deg)';
-	setTimeout(() => {    
+	setTimeout(() => {
+    
 		diceElement2.src = diceImages2[randomNum - 1];
 		diceElement2.style.transform = 'rotate(0deg)';
+
 		
 	}, 500);
   
   valordadopc=randomNum;
+
 }
 
 function movimiento(){
@@ -109,21 +116,26 @@ function movilidad(){
           $("#pregunta").modal("show");
         },1200);
       }
-      else{
+      else{ 
         setTimeout(moverfichapc,1000);
       }
     }
-    else{            
+    else{      
+      
       $("#ganador").modal("show");
-      clearInterval(movid);      
+      clearInterval(movid);
+      
+      
     }
-  }  
+  }
+  
   tiradasant++;
 }
 
 function mover(){  
   tiradasant=tiradas+1;
-  tiradas=tiradas+valordado;  
+  tiradas=tiradas+valordado;
+  
   $("#fondoaudio")[0].pause();	
   $("#acarro")[0].play();
   
@@ -139,36 +151,7 @@ function mover(){
     setTimeout(function(){$("#ganador").modal("show");},1000);
     
     clearInterval(movid);
-  }  
-  
-  posy1=posicionesy[1]-20;  
-  posx2=posicionesx[2]-20;
-  posy2=posicionesy[2]-20;  
-  posx3=posicionesx[3]-20;
-  posy3=posicionesy[3]-20;  
-  posx4=posicionesx[4]-20;
-  posy4=posicionesy[4]-20;  
-  posx5=posicionesx[5]-20;
-  posy5=posicionesy[5]-20;  
-  posx6=posicionesx[6]-20;
-  posy6=posicionesy[6]-20;
-  
-  const div = $('#jugador');
-  
-  div.animate({
-    left: posy1+'px',
-    top: posx1+'px'
-  }, 1000, function() {   
-    div.animate({
-      left: posy2+'px',
-      top: posx2+'px'
-    }, 1000, function() {   
-      div.animate({
-        left: posy3+'px',
-        top: posx3+'px'
-      }, 1000);
-    });
-  }); 
+  }
 }
 
 function seleccion(parametro){
@@ -243,8 +226,8 @@ function validarr(parametro){
 function moverfichapc(){  
   rollDice2();
   
-  tiradas2=tiradas2+valordadopc;  
-	
+  tiradas2=tiradas2+valordadopc;    
+  
   if(tiradas2<51){
     posxpc=posicionesx[tiradas2]-20;
     posypc=posicionesy[tiradas2]-20;
@@ -262,6 +245,8 @@ function moverfichapc(){
     
     setTimeout(function(){$("#nointentos").modal("show")},1500);
   }
+  
+  
 }
 
 function inicio(){
@@ -269,6 +254,7 @@ function inicio(){
   posiciones=generarNumerosAleatorios();  
   
 	$("#modalinicio").modal("hide");      
-  	$("#preguntado").html(preguntas[posiciones[valoractual]]);
-	$("#fondoaudio")[0].play();	  
+  $("#preguntado").html(preguntas[posiciones[valoractual]]);
+	$("#fondoaudio")[0].play();	
+  
 }

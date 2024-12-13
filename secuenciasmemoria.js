@@ -31,8 +31,6 @@ function ocultar(){
   
 }
 
-//6 10 y 12 intentos
-
 function cambio(elemento,valor){	
   if(elemento!=elementoactual){		
     if(clicado[elemento]==0){
@@ -167,7 +165,7 @@ function actualizarContador() {
     contador--;
     setTimeout(actualizarContador, 1000);
   } else {
-    //$('#contador').text('¡Listo!');
+    
     $("#miniciar").modal('hide');
     $("#c1,#c2,#c3,#c4,#c5,#c6,#c7,#c8,#c9,#c10,#c11,#c12").animate({opacity:0.3},500, function() {    
       $("#c1,#c2,#c3,#c4,#c5,#c6,#c7,#c8,#c9,#c10,#c11,#c12").animate({

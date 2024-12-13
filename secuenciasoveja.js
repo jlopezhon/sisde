@@ -18,8 +18,6 @@ var valores=["","Es una respuesta a una emoción en específico","Como la culpa 
 
 var valoractual=0;
 
-//valores=["","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25"];
-
 var seleccionados=[""];
 var pseleccionados=[""];
 
@@ -29,32 +27,32 @@ function coloraleatorio(){
   var mov=0;
   var color=0;
   var colores = [
-  '#FFFFFF', // Blanco
-  '#FFFAF0', // Marfil
-  '#F0FFF0', // Miel de rocío
-  '#F5F5DC', // Beige
-  '#FFE4C4', // Cáscara de huevo
-  '#F0E68C', // Amarillo khaki
-  '#FAFAD2', // Amarillo arena
-  '#FFFACD', // Amarillo limón
-  '#FFD700', // Oro
-  '#FFFFF0', // Marfil claro
-  '#FFEFD5', // PapayaWhip
-  '#FFF5E1', // Almendra
-  '#FAEBD7', // Almendra claro
-  '#FFE4B5', // Moccasin
-  '#FFDEAD', // Piel de melocotón
-  '#FFE4E1', // Rosa almendra
-  '#FFF0F5', // Lavanda rojiza
-  '#FAF0E6', // Lino
-  '#FFEBCD', // Trigo
-  '#FFFAFA', // Nieve
-  '#F5FFFA', // Menta marina
-  '#F0FFFF', // Azul celeste
-  '#E0FFFF', // Azul claro
-  '#FAF0F0', // Rosa pastel
-  '#FFE4CC', // Melocotón
-  '#FFF5EE'  // Seashell
+  '#FFFFFF', 
+  '#FFFAF0', 
+  '#F0FFF0', 
+  '#F5F5DC', 
+  '#FFE4C4', 
+  '#F0E68C', 
+  '#FAFAD2', 
+  '#FFFACD', 
+  '#FFD700', 
+  '#FFFFF0', 
+  '#FFEFD5', 
+  '#FFF5E1', 
+  '#FAEBD7', 
+  '#FFE4B5', 
+  '#FFDEAD', 
+  '#FFE4E1', 
+  '#FFF0F5', 
+  '#FAF0E6', 
+  '#FFEBCD', 
+  '#FFFAFA', 
+  '#F5FFFA', 
+  '#F0FFFF', 
+  '#E0FFFF', 
+  '#FAF0F0', 
+  '#FFE4CC', 
+  '#FFF5EE'  
 ];
 
   
@@ -207,7 +205,6 @@ $(document).ready(function() {
     }
   });
 });
-
 
 
 coloraleatorio();

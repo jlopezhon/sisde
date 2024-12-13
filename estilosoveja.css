@@ -3,18 +3,13 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	height: 500px;		
-	/*d-flex flex-wrap justify-content-center align-items-center*/
+	height: 500px;			
 }
 
 .botoninicio{
 	display: none;
 	opacity: 0;
 	transition: opacity 1s ease;
-}
-
-button{
-
 }
 
 .botones{

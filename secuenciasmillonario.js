@@ -35,11 +35,11 @@ let reproduciendo = false;
 
 function reproducirDetenerAudio() {
   if (reproduciendo) {
-    audio.pause();  // Detiene la reproducción si está en reproducción
+    audio.pause();  
   } else {
-    audio.play();  // Reproduce si está detenido
+    audio.play();  
   }
-  reproduciendo = !reproduciendo;  // Invierte el estado de reproducción
+  reproduciendo = !reproduciendo;  
 }
 
 
@@ -57,7 +57,7 @@ function inicio(){
 		nal=mov-2;
     opcion=mov-2;
     if(datos[posiciones[0]][mov]!=''){      
-     //$("#boton"+numb).text(opciones[opcion]+datos[posiciones[0]][mov]);  
+     
       $("#boton"+numb[nal]).text(datos[posiciones[0]][numal[nal]]);  
       
      var largo=$("#boton"+numb).text();
@@ -263,11 +263,5 @@ function masseg(parametro){
 	segundos+=10;
 	$("#o"+parametro).attr("disabled","disabled");
 }
-
-$(document).ready(function() {
-	
-});
-
-
 
 inicio();
